@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>VR Command Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+<style>
+        .container {
+            padding: 20px 120px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 20px 32px;
+            text-align: center;
+            font-size: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: .2s;
+            width: 100%;
+        }
+        .btn:hover, .btn:focus {
+            border: none;
+            background-color: #4CAF50;
+            color: #000;
+        }
+
+</style>
+</head>
 <body>
-
-<h2>My First JavaScript</h2>
-
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
-
+   <div class="container">
+      <h1>VR Command Demo</h1>
+      <hr>
+      <div class="row">
+        <div class="row">
+          <div class="col-md-6 form-group">
+              <h3>Input</p>
+              <textarea class="form-control" id="input" placeholder="Paste your input json here" rows="10" data-bind="value: input"></textarea>
+          </div>
+          <div class="col-md-6 form-group">
+            <h3>Command</h3>
+            <textarea class="form-control" id="command" placeholder="Converted command shows here. Select and copy." rows="10" data-bind="value: command" readonly></textarea>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/convert.js?version=1.2"></script>
 </body>
-</html> 
+</html>
