@@ -7,7 +7,7 @@ function AppViewModel() {
     self.command = ko.computed(function() {
       if (self.input().length == 0)
           return tip;
-      result = "'" + self.input().replace(/[" ]/g, function(x){ return "\\"+x}) + "'";
+      result = "'" + self.input().replace(/[" ,]/g, function(x){ return "\\"+x}) + "'";
       return result;
     });
 
